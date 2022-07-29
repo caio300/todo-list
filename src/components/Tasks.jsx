@@ -8,7 +8,7 @@ export function Tasks({ id }) {
       <input className={style.inputRadio} type="checkbox" id={id} name={id}/>
       <label htmlFor={id}>
         <div className={style.btnRadio}></div>
-        <span>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</span>
+        <span>Integer urna interdum massa libero auctor neque turpis turpis sempe Integer urna interdum</span>
       </label>
       <div className={style.trash}>
         <Trash size={16}/>

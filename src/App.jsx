@@ -16,7 +16,7 @@ function App() {
         <Search />
 
         <div className={style.infoTasks}>
-          <p className={style.createdTasks}>Tarefaz criadas <span>0</span></p>
+          <p className={style.createdTasks}>Tarefas criadas <span>0</span></p>
           <p className={style.doneTasks}>Concluídas <span>0</span></p>
         </div>
          {/* <InsistentTasks /> */}
