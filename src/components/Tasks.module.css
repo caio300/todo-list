@@ -1,0 +1,71 @@
+.tasks {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.75rem;
+  padding: 1rem 1rem 1rem 0;
+  background: var(--gray-500);
+  border: 1px solid var(--gray-400);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+}
+
+.inputRadio {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  display: block;
+}
+
+.btnRadio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5rem;
+  width: 1.75rem;
+  border-radius: 100px;
+  border: 1px solid var(--blue);
+}
+
+label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 1rem;
+  margin-right: 0.5rem;
+}
+
+input[type='radio']:checked + label span{
+  text-decoration: line-through;
+}
+
+input[type='radio']:checked + label .btnRadio {
+  border: none;
+  background-color: var(--purpleDark);
+  background-position: center;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='%23000000' viewBox='0 0 256 256'%3E%3Crect width='256' height='256' fill='none'%3E%3C/rect%3E%3Cpolyline points='216 72 104 184 48 128' fill='none' stroke='%23F2F2F2' stroke-linecap='round' stroke-linejoin='round' stroke-width='24'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+.tasks span {
+  color: var(--gray-100);
+}
+
+.trash {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.trash:hover {
+  border-radius: 5px;
+  background: var(--gray-400);
+}
+
+.trash svg:hover {
+  color: var(--red);
+}
