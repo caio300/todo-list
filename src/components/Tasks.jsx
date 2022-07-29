@@ -1,4 +1,4 @@
-import { Trash, Check } from 'phosphor-react';
+import { Trash } from 'phosphor-react';
 import style from './Tasks.module.css';
 
 
