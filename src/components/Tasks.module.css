@@ -26,7 +26,7 @@
   height: 1.5rem;
   width: 1.75rem;
   border-radius: 100px;
-  border: 1px solid var(--blue);
+  border: 2px solid var(--blueDark);
 }
 
 label {
@@ -39,6 +39,11 @@ label {
   gap: 1rem;
   margin-left: 1rem;
   margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+label:hover .btnRadio{
+  background: rgb(78, 168, 222, 0.2);
 }
 
 input[type='radio']:checked + label span{
@@ -50,6 +55,10 @@ input[type='radio']:checked + label .btnRadio {
   background-color: var(--purpleDark);
   background-position: center;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='%23000000' viewBox='0 0 256 256'%3E%3Crect width='256' height='256' fill='none'%3E%3C/rect%3E%3Cpolyline points='216 72 104 184 48 128' fill='none' stroke='%23F2F2F2' stroke-linecap='round' stroke-linejoin='round' stroke-width='24'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+input[type='radio']:checked:hover + label .btnRadio {
+  background-color: var(--purple);
 }
 
 .tasks span {

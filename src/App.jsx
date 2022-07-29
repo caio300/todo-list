@@ -19,7 +19,7 @@ function App() {
           <p className={style.createdTasks}>Tarefaz criadas <span>0</span></p>
           <p className={style.doneTasks}>Concluídas <span>0</span></p>
         </div>
-        {/* <InsistentTasks /> */}
+         {/* <InsistentTasks /> */}
         <Tasks id={1}/>
         <Tasks id={2}/>
         <Tasks id={3}/>
