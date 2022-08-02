@@ -1,27 +1,46 @@
 import { Trash } from 'phosphor-react';
 import style from './Tasks.module.css';
 
-
-export function Tasks() {
-  return (
-    <div className={style.tasks}>
-      <input className={style.inputRadio} type="checkbox" id='1' name='1'/>
-      <label htmlFor='1'>
-        <div className={style.btnRadio}></div>
-        <span>Integer urna interdum massa libero auctor neque turpis turpis sempe Integer urna interdum</span>
-      </label>
-      <div className={style.trash}>
-        <Trash size={16}/>
-      </div>
-    </div>
-  )
+interface Content {
+  id: string,
+  content: string,
+  isCompleted: boolean
+}
+interface propsTasks {
+  id: string,
+  content: string,
+  contentTasks: Content[],
+  setContentTasks: Function,
 }
 
 
-{/* <select className={style.tasks}>
-      <input type="radio" name='1'/>
-      <p>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
-      <div>
+export function Tasks({ id, content, contentTasks, setContentTasks }:propsTasks) {
+  
+  const deleteTask  = (id:string) => {
+    const updatedTasks = contentTasks.filter((elem) => elem.id !== id);
+    setContentTasks(updatedTasks);
+  }
+
+  const taskCompleted = (id:string) => {
+    const taskCompleted = contentTasks.map((task) => {
+      if(task.id === id) {
+        task.isCompleted = !task.isCompleted;
+      }
+      return task
+    });
+    setContentTasks(taskCompleted);
+  }
+
+  return (
+    <div className={style.tasks}>
+      <input className={style.inputRadio} type="checkbox" id={id} name={id}/>
+      <label htmlFor={id} onClick={() => taskCompleted(id)}>
+        <div className={style.btnRadio}></div>
+        <span>{content}</span>
+      </label>
+      <button className={style.trash} onClick={() => deleteTask(id)}>
         <Trash size={16}/>
-      </div>
-    </select> */}
+      </button>
+    </div>
+  )
+}

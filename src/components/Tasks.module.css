@@ -73,6 +73,8 @@ input[type='checkbox']:checked:hover + label .btnRadio {
 .trash {
   padding: 0.5rem;
   cursor: pointer;
+  border: none;
+  background: var(--gray-500);
 }
 
 .trash:hover {
