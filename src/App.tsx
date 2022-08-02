@@ -5,8 +5,10 @@ import { Tasks } from './components/Tasks';
 
 import style from './App.module.css';
 import '../global.css';
+import { useState } from 'react';
 
 function App() {
+  const [contentTasks, setContentTesks ] = useState();
   
   return (
     <div>
@@ -20,12 +22,12 @@ function App() {
           <p className={style.doneTasks}>Concluídas <span>0</span></p>
         </div>
          {/* <InsistentTasks /> */}
-        <Tasks id={1}/>
-        <Tasks id={2}/>
-        <Tasks id={3}/>
-        <Tasks id={4}/>
-        <Tasks id={5}/>
-        <Tasks id={6}/>
+        <Tasks />
+        <Tasks />
+        <Tasks />
+        <Tasks />
+        <Tasks />
+        <Tasks />
       </div>
     </div>
   )

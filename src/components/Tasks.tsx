@@ -2,11 +2,11 @@ import { Trash } from 'phosphor-react';
 import style from './Tasks.module.css';
 
 
-export function Tasks({ id }) {
+export function Tasks() {
   return (
     <div className={style.tasks}>
-      <input className={style.inputRadio} type="checkbox" id={id} name={id}/>
-      <label htmlFor={id}>
+      <input className={style.inputRadio} type="checkbox" id='1' name='1'/>
+      <label htmlFor='1'>
         <div className={style.btnRadio}></div>
         <span>Integer urna interdum massa libero auctor neque turpis turpis sempe Integer urna interdum</span>
       </label>

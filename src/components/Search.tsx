@@ -1,5 +1,5 @@
-import style from './Search.module.css'
-import { PlusCircle } from 'phosphor-react'
+import style from './Search.module.css';
+import { PlusCircle } from 'phosphor-react';
 
 export function Search() {
   return (
